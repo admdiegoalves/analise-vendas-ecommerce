@@ -1,49 +1,76 @@
-# 🛒 Desafio Alura Store: Análise de Desempenho e Recomendação de Venda
+# 🛒 Análise de Desempenho de Lojas — Recomendação Estratégica de Desinvestimento
 
-## 🎯 Objetivo do Projeto
-
-Este projeto de Análise de Dados foi desenvolvido para atender à solicitação do Sr. João, proprietário da Alura Store, que planeja vender uma de suas quatro lojas para investir em um novo empreendimento.
-
-O objetivo principal é responder à pergunta: **"Qual loja da Alura Store o João deve vender?"**
-
-A recomendação final é baseada em uma análise quantitativa e visual de métricas de desempenho essenciais para o negócio.
+Análise exploratória de dados de vendas de uma rede de e-commerce com 4 unidades, com o objetivo de identificar a loja de menor desempenho e embasar uma decisão estratégica de desinvestimento.
 
 ---
 
-## 📊 Metodologia e Análises Chave
+## 🎯 Problema de Negócio
 
-Utilizamos a biblioteca Pandas para manipulação de dados e o Matplotlib/Seaborn para visualização. As seguintes métricas foram analisadas por loja:
+Uma rede de e-commerce com quatro lojas busca otimizar seu portfólio de ativos. A questão central:
 
-1.  **Faturamento Total:** KPI primário para medir a contribuição de receita.
-2.  **Média de Avaliação dos Clientes:** Indicador de Satisfação e Qualidade (notas de 1 a 5).
-3.  **Custo Logístico (Frete Médio):** Para entender a eficiência da operação de envio.
-4.  **Desempenho Geográfico (Extra):** Mapeamento de vendas por Latitude e Longitude para identificar a área de atuação e densidade de clientes de cada loja.
+> **Qual unidade apresenta o pior desempenho e deve ser priorizada para venda?**
 
-### 📈 Visualizações Geradas
-
-Foram criados gráficos concisos para cada métrica principal:
-
-* **Faturamento Total por Loja:** Gráfico de Barras
-* **Média de Avaliação por Loja:** Gráfico de Barras Horizontais (Alternativa ao formato circular, por clareza analítica)
-* **Distribuição de Produtos:** Gráfico de Barras (Top 10 Produtos Mais Vendidos)
+A recomendação final é baseada em análise quantitativa de KPIs de receita, satisfação do cliente e eficiência logística.
 
 ---
 
-### 💡 Recomendação Final: Vender a Loja 4
+## 📊 KPIs Analisados
 
-A Loja 4 apresenta o pior desempenho nas métricas mais críticas:
-* Menor Receita: A Loja 4 gera o menor volume de faturamento total, indicando a menor contribuição para a receita consolidada da Alura Store.
-* Satisfação: Possui uma das menores médias de avaliação, sugerindo problemas na experiência do cliente ou qualidade de entrega/produto.
-Vender a Loja 4 permite ao Sr. João eliminar o ativo de menor performance em termos de receita e, provavelmente, o de maior risco em termos de satisfação. O capital obtido da venda pode ser investido no novo empreendimento ou nas outras três lojas mais eficientes.
+| Métrica | Descrição |
+|---|---|
+| Faturamento Total | Contribuição de receita por loja |
+| Avaliação Média dos Clientes | Satisfação e qualidade percebida (1–5) |
+| Frete Médio | Eficiência logística e custo operacional |
+| Distribuição Geográfica | Mapeamento de densidade de clientes por região |
+
+---
+
+## 🔍 Principais Resultados
+
+- **Loja 4** apresenta o menor faturamento total entre as quatro unidades
+- **Loja 4** registra uma das menores médias de avaliação de clientes, indicando risco de churn e insatisfação
+- A combinação de baixa receita + baixa satisfação configura o pior perfil de risco-retorno do portfólio
+
+**Recomendação:** Desinvestir na Loja 4, direcionando o capital para expansão das unidades de maior performance.
+
+---
+
+## 🛠️ Stack Técnica
+
+- **Python** — Pandas, Matplotlib, Seaborn
+- **Jupyter Notebook / Google Colab**
+- **Análise Exploratória de Dados (EDA)**
+- **Visualização de dados para suporte à decisão**
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-* `Desafio_Alura_Store.ipynb`: Notebook Colab contendo todas as etapas da análise, limpeza de dados, cálculos e geração de gráficos.
-* `README.md`: Este arquivo.
-* `/dados`:
-(https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_1.csv)
-(https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_2.csv)
-(https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_3.csv)
-(https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_4.csv)
+```
+analise-vendas-ecommerce/
+├── analise_lojas.ipynb   # Notebook com EDA completa e recomendação
+└── README.md
+```
+
+---
+
+## ▶️ Como Executar
+
+1. Abra o notebook `analise_lojas.ipynb` no Google Colab ou Jupyter
+2. Execute todas as células em sequência
+3. Os dados são carregados diretamente via URL — sem necessidade de download manual
+
+---
+
+## 📌 Aprendizados e Aplicações
+
+Este projeto simula um cenário real de **analytics para suporte à decisão estratégica**, comum em áreas de:
+- Business Intelligence
+- Customer Analytics
+- Revenue Operations
+
+A mesma abordagem pode ser aplicada a análises de churn, ranking de produtos, segmentação de clientes e avaliação de performance de equipes.
+
+---
+
+*Desenvolvido por [Diego Alves](https://www.linkedin.com/in/admdiegoalves/)*
